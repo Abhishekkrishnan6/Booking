@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
  <style>
     
 *{
@@ -26,9 +27,28 @@ input::-webkit-inner-spin-button{
 input[type=number]{
   -moz-appearance: textfield;
 }
+
+.custom-bg{
+  background-color: #279e8c;
+}
+.custom-bg:hover{
+  background-color: #27e;
+}
+.availability-form{
+  margin-top: -50px;
+  z-index:2;
+  position: relative;
+}
+@media screen and(max-width: 575px){
+  .availability-form{
+  margin-top: 25px;
+  padding: 0 35px;
+ 
+}
+}
   </style>
 </head>
-  <body>
+  <body class="bg-light">
   <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">BOOKING</a>
@@ -168,7 +188,130 @@ input[type=number]{
     </div>
   </div>
 </div>
-  
+  <div class="container-fluid px-lg-4 mt-4">
+  <div class="swiper swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/carousel/1.png" class="w-100 d-block" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/carousel/2.png" class="w-100 d-block" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/carousel/3.png" class="w-100 d-block" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/carousel/4.png" class="w-100 d-block" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/carousel/5.png" class="w-100 d-block" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/carousel/6.png" class="w-100 d-block" />
+      </div>
+      
+    </div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div> -->
+  </div>
+</div>
+  </div>
+
+
+
+<div class="container availability-form">
+<div class="row">
+<div class="col-lg-12 bg-white shadow p-4 rounded">
+<h5 class="mb-4">Check Booking Availability</h5> 
+<form>
+<div class="row align-items-end">
+<div class="col-lg-3 mb-3">
+<label class="form-label" style="font-weight: 500; ">Check-in</label> 
+<input type="date" class="form-control shadow-none">
+ </div> 
+ <div class="col-lg-3 mb-3">
+<label class="form-label" style="font-weight: 500; ">Check-out</label> 
+<input type="date" class="form-control shadow-none"> 
+</div> 
+<div class="col-lg-3 mb-3">
+<label class="form-label" style="font-weight: 500; ">Adult</label> 
+<select class="form-select shadow-none"> 
+  <!-- <option selected>Open this select menu</option>  -->
+  <option value="1">One</option> 
+  <option value="2">Two</option> 
+  <option value="3">Three</option>
+</select> 
+</div> 
+<div class="col-lg-2 mb-3">
+<label class="form-label" style="font-weight: 500; ">Children</label> 
+<select class="form-select shadow-none"> 
+  <!-- <option selected>Open this select menu</option>  -->
+  <option value="1">One</option> 
+  <option value="2">Two</option> 
+  <option value="3">Three</option>
+</select> 
+</div> 
+<div class="col-lg-1 mb-lg-3 mt-2">
+  <button type="submit" class="btn text-white shadow-none custom-bg">Submit</button>
+</div>
+</div> 
+</form> 
+</div>
+</div>
+</div>
+
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR ROOMS</h2>
+
+<div class="container">
+   <div classe="row">
+<div class="col-lg-4 col-md-6 my-3"> 
+  <div class="card border-0 shadow" styles ="max-width: 350px; margin: auto;">
+<img src="images/rooms/2.png" class="card-img-top" alt="...">
+ <div class="card-body"> 
+  <h5>Room Name</h5>
+  <h6 class="mb-4">200 per night </h6>
+  <div class="features mb-4" >
+    <h6 class="mb-1">Features</h6>
+
+</div>
+ <a href="#" class="btn btn-primary">Go somewhere</a> 
+</div>
+</div>
+</div>
+<div class="col-lg-12 text-center mt-5">
+<a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none" >More Rooms>>></a>
+
+</div>
+</div> 
+</div>
+
+
+
+
+<br><br><br>
+<br><br><br>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>  
+<script>
+    var swiper = new Swiper(".swiper-container", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      }
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+    });
+  </script>
+</body>
 </html>
