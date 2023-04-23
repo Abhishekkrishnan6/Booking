@@ -479,10 +479,199 @@
 
 
 </div>
+
+</div>
+<div class="col-lg-12 text-center mt-5">
+<a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none" >More Facilities>>></a>
+
 </div>
 
-<br><br><br>
-<br><br><br>
+
+
+
+
+
+
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">TESTIMONIAL</h2>
+<div class="container">
+  
+<div class="swiper swiper-testimonial">
+    <div class="swiper-wrapper mb-5">
+      <div class="swiper-slide bg-white p-4">
+        <div class="profile d-flex align-items-center mb-3">
+          <img src="images/features/star.svg" width=30px>
+          <h6 class="m-0 ms-2">
+            Random user1
+          </h6>
+          
+        </div>
+        <p> ekufgwejfhvwejfweufewf
+            wejvewuyewf
+           </p>
+           <div class="rating">
+           <i class="bi bi-star-fill text-warning"></i>   
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+</div>
+    </div>
+    <div class="swiper-slide bg-white p-4">
+        <div class="profile d-flex align-items-center mb-3">
+          <img src="images/features/star.svg" width=30px>
+          <h6 class="m-0 ms-2">
+            Random user1
+          </h6>
+          
+        </div>
+        <p> ekufgwejfhvwejfweufewf
+            wejvewuyewf
+           </p>
+           <div class="rating">
+           <i class="bi bi-star-fill text-warning"></i>   
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+</div>
+    </div>
+    <div class="swiper-slide bg-white p-4">
+        <div class="profile d-flex align-items-center mb-3">
+          <img src="images/features/star.svg" width=30px>
+          <h6 class="m-0 ms-2">
+            Random user1
+          </h6>
+          
+        </div>
+        <p> ekufgwejfhvwejfweufewf
+            wejvewuyewf
+           </p>
+           <div class="rating">
+           <i class="bi bi-star-fill text-warning"></i>   
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+</div>
+    </div>
+    <div class="swiper-slide bg-white p-4">
+        <div class="profile d-flex align-items-center mb-3">
+          <img src="images/features/star.svg" width=30px>
+          <h6 class="m-0 ms-2">
+            Random user1
+          </h6>
+          
+        </div>
+        <p> ekufgwejfhvwejfweufewf
+            wejvewuyewf
+           </p>
+           <div class="rating">
+           <i class="bi bi-star-fill text-warning"></i>   
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+   <i class="bi bi-star-fill text-warning"></i> 
+</div>
+    </div>
+  
+  </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="col-lg-12 text-center mt-5">
+<a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none" >Know More>>></a>
+
+</div>
+</div>
+
+
+
+
+
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">REACH US</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+    <iframe class="w-100 rounded" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230816.03120123153!2d82.82630000757568!3d25.320981378368476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1682271063501!5m2!1sen!2sin"   loading="lazy" ></iframe>
+</div>
+<div class="col-lg-4 col-md-4">
+  <div class="bg-white p-4 rounded mb-4">
+
+  <h5>Call Us</h5>
+  <a href="tel: +918210642410" class="d-inline-block mb-2 text-decoration-none text-dark">
+    <i class="bi bi-telephone-fill"></i> +918210642410</a>
+    <br>
+    <a href="tel: +918210642410" class="d-inline-block  text-decoration-none text-dark">
+    <i class="bi bi-telephone-fill"></i> +918210642410</a>
+    
+  
+  
+  </div>
+  <div class="bg-white p-4 rounded mb-4">
+
+<h5>Follow Us</h5>
+<a href="#" class="d-inline-block mb-3 ">
+<span class="badge bg-light text-dark fs-6 p-2"> 
+  <i class="bi bi-twitter me-1"></i> Twitter</span> 
+    </a>
+<br>
+<a href="#" class="d-inline-block mb-3 ">
+<span class="badge bg-light text-dark fs-6 p-2"> 
+  <i class="bi bi-facebook me-1"></i> Facebook</span> 
+    </a>
+    <br>
+    <a href="#" class="d-inline-block ">
+<span class="badge bg-light text-dark fs-6 p-2"> 
+  <i class="bi bi-instagram me-1"></i> Instagram</span> 
+    </a>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+
+<div class="container-fluid bg-white mt-5">
+  <div class="row">
+    <div class="col-lg-4 p-4">
+      <h3 class="h-font fw-bold fs-3 mb-2">BOOKINGS</h3>
+    <p>
+      weugweuhjfgvwe wugrw wuyr uyfwr
+      iukfiyfuy
+      udcutfyt uyfuy registerModal
+    </p>
+    </div>
+    <div class="col-lg-4 p-4">
+  <h5 class="mb-3">Links</h5>
+  <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a><br>
+  <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</a><br>
+  <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a><br>
+  <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Contact Us</a><br>
+  <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">About</a><br>    
+
+
+</div>
+    <div class="col-lg-4 p-4">
+<h5 class="mb-3">Follow Us</h5>
+<a href="#" class="d-inline-block text-dark text-decoration-none mb-2">
+  <i class="bi bi-instagram me-1"></i> Instagram
+    </a> <br>
+    <a href="#" class="d-inline-block text-dark text-decoration-none mb-2">
+  <i class="bi bi-facebook me-1"></i> Facebook
+    </a> <br>
+    <a href="#" class="d-inline-block text-dark text-decoration-none ">
+  <i class="bi bi-twitter me-1"></i> Twitter
+    </a> <br>
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+<h6 class="text-center bg-dark text-white p-3 m-0">Design and Developed BY Abhishek </h6>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>  
@@ -503,6 +692,40 @@
       //   el: ".swiper-pagination",
       //   clickable: true,
       // },
+    });
+
+    var swiper = new Swiper(".swiper-testimonial", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      slidesPerView: "4",
+      loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }
+      
     });
   </script>
 </body>
