@@ -15,7 +15,7 @@
 .availability-form{
   margin-top: -50px;
   z-index:2;
-  position: relative;
+  position: relative; 
 }
 @media screen and(max-width: 575px){
   .availability-form{
