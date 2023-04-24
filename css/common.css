@@ -1,3 +1,8 @@
+:root{
+    --teal: #279e8c;
+    --teal-hover:#27e;
+}
+
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -14,10 +19,17 @@ input[type=number]{
 }
 
 .custom-bg{
-  background-color: #279e8c;
-  border: 1px solid #279e8c;
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
 }
 .custom-bg:hover{
-  background-color: #27e;
-  border:  #27e;
+  background-color: var(--teal-hover);
+  border:  var(--teal-hover);
+}
+
+.h-line{
+  width: 150px;
+  margin: 0 auto;
+  height: 1.7px;
+
 }
