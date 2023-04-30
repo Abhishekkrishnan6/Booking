@@ -44,7 +44,7 @@ Oenis duaerat non nan aperian exercitationes neque al</p>
 <div class="col-lg-4 col-md-6 mb-5 px-4">
       <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
         <div class="d-flex align-items-center mb-2">
-        <img src="images/features/3.svg" width="40px">
+        <img src="images/features/6.svg" width="40px">
           <h5 class="m-0 ms-3"> Wifi</h5>
 </div>
           <p>
@@ -55,8 +55,8 @@ Oenis duaerat non nan aperian exercitationes neque al</p>
 <div class="col-lg-4 col-md-6 mb-5 px-4">
       <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
         <div class="d-flex align-items-center mb-2">
-        <img src="images/features/3.svg" width="40px">
-          <h5 class="m-0 ms-3"> Wifi</h5>
+        <img src="images/features/2.svg" width="40px">
+          <h5 class="m-0 ms-3"> TV</h5>
 </div>
           <p>
 Loren ipsum dolor sit amet consectetur adipisicing elit.
@@ -66,8 +66,8 @@ Oenis duaerat non nan aperian exercitationes neque al</p>
 <div class="col-lg-4 col-md-6 mb-5 px-4">
       <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
         <div class="d-flex align-items-center mb-2">
-        <img src="images/features/3.svg" width="40px">
-          <h5 class="m-0 ms-3"> Wifi</h5>
+        <img src="images/features/4.svg" width="40px">
+          <h5 class="m-0 ms-3"> Massage</h5>
 </div>
           <p>
 Loren ipsum dolor sit amet consectetur adipisicing elit.
@@ -77,8 +77,8 @@ Oenis duaerat non nan aperian exercitationes neque al</p>
 <div class="col-lg-4 col-md-6 mb-5 px-4">
       <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
         <div class="d-flex align-items-center mb-2">
-        <img src="images/features/3.svg" width="40px">
-          <h5 class="m-0 ms-3"> Wifi</h5>
+        <img src="images/features/1.svg" width="40px">
+          <h5 class="m-0 ms-3"> Fire Alarm</h5>
 </div>
           <p>
 Loren ipsum dolor sit amet consectetur adipisicing elit.
@@ -88,8 +88,8 @@ Oenis duaerat non nan aperian exercitationes neque al</p>
 <div class="col-lg-4 col-md-6 mb-5 px-4">
       <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
         <div class="d-flex align-items-center mb-2">
-        <img src="images/features/3.svg" width="40px">
-          <h5 class="m-0 ms-3"> Wifi</h5>
+        <img src="images/features/5.svg" width="40px">
+          <h5 class="m-0 ms-3">A.C</h5>
 </div>
           <p>
 Loren ipsum dolor sit amet consectetur adipisicing elit.

@@ -22,9 +22,20 @@ require('inc/links.php');
     </head>
   <body class="bg-light">
 <div class="container-fluid bg-dark text-light p-3 d-flex align-items-center justify-content-between">
-<h3 class="mb-0">Admin panel </h3>	
+<h3 class="mb-0 h-font">Admin panel </h3>	
 <a href="logout.php" class="btn btn-light btn-sm">Log out</a>
 </div>
+
+
+
+<div class="col-lg-2 bg-dark border-top border-3 border-secondary">
+
+
+
+
+</div>
+
+
 
 
 
