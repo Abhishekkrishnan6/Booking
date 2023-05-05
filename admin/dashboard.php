@@ -21,48 +21,25 @@ require('inc/links.php');
 ?>
     </head>
   <body class="bg-light">
-<div class="container-fluid bg-dark text-light p-3 d-flex align-items-center justify-content-between">
-<h3 class="mb-0 h-font">Admin panel </h3>	
-<a href="logout.php" class="btn btn-light btn-sm">Log out</a>
-</div>
+<?php require('inc/header.php'); ?>
 
+<div class="container-fluid" id="main-content">
+  <div class="row">
 
-
-<div class="col-lg-2 bg-dark border-top border-3 border-secondary">
-<nav class="navbar navbar-expand-lg navbar-dark "> 
-  <div class="container-fluid flex-lg-column align-items-stretch"> 
-    <h4 class="mt-2 text-light">ADMIN PANEL</h4>
-    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#adminDropdown" aria-cont></button>
-    <span class="navbar-toggler-con"></span>
-</button>
-<div class="collapse navar-collapse flex-column align-items-stretch mt-2" id="adminDropdown"> 
- 
-<ul class ="nav nav-pills flex-column"> 
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a> 
-  </i>
-<li class= "nav-item"> 
-  <a class= "nav-link" href="#">Link</a> 
-</li> 
-<li class="nav-item"> 
-  <a class="nav-link" href="#">Link</a> 
-</li> 
-<li class="nav-item">
-<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> 
-</i>
-</ul>
-
+  <div class="col-lg-10 ms-auto p-4 overflow-hidden">
+khrg eiurhg ieurhituer ituger tiugetiuegt eriutg eriutg eriugt eiugt i eriu t 
+tgrtueriter
+tertuier ter
+ertier tiugerter
+er tuegrti giert
+ rtugitgeriugt
+  eutiqeugigwriuqe
+  rqw egeieug teiugt iqegtiugeqiutgeigteu tg uegiteiugt eigtei
 
 </div>
 
 </div>
-
-</nav>
 </div>
-
-
-
-
 
 <?php
 
