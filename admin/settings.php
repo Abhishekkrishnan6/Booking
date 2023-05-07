@@ -221,11 +221,11 @@ require('inc/links.php');
  
   <div class="input-group mb-3">
   <span class="input-group-text" ><i class="bi bi-telephone-fill"></i></span>
-  <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" >
+  <input type="number" name="pn1" id="pn1_inp" class="form-control shadow-none" >
 </div>
 <div class="input-group mb-3">
   <span class="input-group-text" ><i class="bi bi-telephone-fill"></i></span>
-  <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" >
+  <input type="number" name="pn2" id="pn2_inp" class="form-control shadow-none" >
 </div>
 
 </div>
@@ -643,12 +643,7 @@ document.getElementById('team-data').innerHTML=this.responseText;
 }
 
 xhr.send('get_members');
-
-
-
 }
-
-
 function rem_member(val){
   let xhr = new XMLHttpRequest();
   xhr.open("POST","ajax/settings_crud.php",true);
