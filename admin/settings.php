@@ -193,9 +193,9 @@ require('inc/links.php');
 <!-- contact details model -->
 
 <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
 
-<form id="general_s_form">
+<form id="contacts_s_form">
 
 
 <div class="modal-content">
@@ -205,22 +205,73 @@ require('inc/links.php');
       <div class="modal-body">
        
 
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col-md-6">
+
+    <div class="mb-3 fw-bold">
+  <label class="form-label">Address</label>
+  <input type="text" name = "address" id="address_inp" class="form-control shadow-none" required>
+</div>
+
+
+
+<div class="mb-3 fw-bold">
+  <label class="form-label">Google Map Link</label>
+  <input type="text" name = "gmap" id="gmap_inp" class="form-control shadow-none" required>
+</div>
 <div class="mb-3">
-  <label class="form-label">Site Title</label>
-  <input type="text" name = "site_title" id="site_title_inp" class="form-control shadow-none" required>
+  <label class="form-label fw-bold">Phone Numbers</label>
+ 
+  <div class="input-group mb-3">
+  <span class="input-group-text" ><i class="bi bi-telephone-fill"></i></span>
+  <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" >
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" ><i class="bi bi-telephone-fill"></i></span>
+  <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" >
+</div>
+
+</div>
+<div class="mb-3">
+  <label class="form-label fw-bold">Email</label>
+  <input type="text" name = "email" id="email_inp" class="form-control shadow-none" required>
+</div>
+
+
+
+</div>
+
+<div class="col-md-6">
+<div class="mb-3">
+  <label class="form-label fw-bold">Social Links</label>
+ 
+  <div class="input-group mb-3">
+  <span class="input-group-text" ><i class="bi bi-facebook"></i></span>
+  <input type="text" name="fb" id="fb_inp" class="form-control shadow-none" required >
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" ><i class="bi bi-instagram"></i></span>
+  <input type="text" name="insta" id="insta_inp" class="form-control shadow-none" required >
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" ><i class="bi bi-twitter"></i></span>
+  <input type="text" name="tw" id="tw_inp" class="form-control shadow-none" >
 </div>
 
 <div class="mb-3">
-  <label class="form-label">About Us</label>
-  <textarea name = "site_about" id="site_about_inp" class="form-control shadow-none" rows="6" required></textarea>
+  <label class="form-label fw-bold">iFrame</label>
+  <input type="text" name = "iframe" id="iframe_inp" class="form-control shadow-none" required>
+</div>
 </div>
 
-
-
+</div>
+</div>
+</div>
       </div>
       <div class="modal-footer">
-        <button type="button" onclick="site_title.value = general_data.site_title, site_about.value=general_data.site_about" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-        <button type="button" onclick="upd_general(site_title_inp.value,site_about_inp.value)"  class="btn custom-bg text-white shadow-none">SUBMIT</button>
+        <button type="button" onclick="contacts_inp(contacts_data)" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+        <button type="submit"  class="btn custom-bg text-white shadow-none">SUBMIT</button>
       </div>
     </div>
 
@@ -254,7 +305,8 @@ let general_data, contacts_data;
 let general_s_form =document.getElementById('general_s_form');
 let site_title_inp = document.getElementById('site_title_inp');
 let site_about_inp = document.getElementById('site_about_inp');
-  
+let contacts_s_form =document.getElementById('contacts_s_form');
+
 function get_general(){
   let site_title = document.getElementById('site_title');
   let site_about = document.getElementById('site_about');
@@ -321,24 +373,14 @@ xhr.onload=function(){
   if(this.responseText==1){
      alert('success','Changes Saved!');
 
-// console.log(' changes made');
-
     get_general();
 
   }
   else{
     alert('error','No Changes Made!');
-    //console.log('no changes made');
+
   }
-  //console.log(this.responseText);
-//   general_data = JSON.parse(this.responseText);
   
-// site_title.innerText = general_data.site_title;
-// site_about.innerText = general_data.site_about;
-
-
-// site_title_inp.value = general_data.site_title;
-// site_about_inp.value = general_data.site_about;
 
 }
 
@@ -351,71 +393,90 @@ xhr.send('site_title='+site_title_val+'&site_about='+site_about_val+'&upd_genera
 
 
 function upd_shutdown(val){
-
-
-
   let xhr = new XMLHttpRequest();
   xhr.open("POST","ajax/settings_crud.php",true);
-
-xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded');
-
+  xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded');
 xhr.onload=function(){
   if(this.responseText==1 && general_data.shutdown==0){
-     alert('success','Site has been shutdown!');
-
-
-   
-
+     alert('success','Site has been shutdown!'); 
   }
   else{
     alert('success','Shutdown mode off!');
-    
   }
   get_general();
 }
-
 xhr.send('upd_shutdown='+val);
-
-
-
-
 }
-// window.onload = function(){
-//    get_general();
-//   // get_contacts();
-
-// }
 function get_contacts(){
   let contacts_p_id = ['address','gmap','pn1','pn2','email','fb','insta','tw'];
   let iframe  =  document.getElementById('iframe');
- 
- let xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open("POST","ajax/settings_crud.php",true);
-
-xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded');
-
-xhr.onload=function(){
- contacts_data = JSON.parse(this.responseText);
+  xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded');
+  xhr.onload=function(){
+  contacts_data = JSON.parse(this.responseText);
   contacts_data =Object.values(contacts_data);
-   iframe.src = contacts_data[9];
-for(i=0;contacts_p_id.length;i++){
-  
+for(i=0;i<contacts_p_id.length;i++){
   document.getElementById(contacts_p_id[i]).innerText=contacts_data[i+1];
 
 }
-//iframe.src = contacts_data[9];
-
+iframe.src = contacts_data[9];
+contacts_inp(contacts_data);
 }
-
 xhr.send('get_contacts')
+}
+function contacts_inp(data){
+let contacts_inp_id = ['address_inp','gmap_inp','pn1_inp','pn2_inp','email_inp','fb_inp','insta_inp','tw_inp','iframe_inp'];
+
+for(i=0;i<contacts_inp_id.length;i++){
+  document.getElementById(contacts_inp_id[i]).value=data[i+1];
+}
+
+
+
 
 }
 
 
-// window.onload = function(){
-//   get_general();
 
-// }
+contacts_s_form.addEventListener('submit',function(e){
+  e.preventDefault();
+  upd_contacts();
+})
+
+function upd_contacts(){
+
+  let index = ['address','gmap','pn1','pn2','email','fb','insta','tw','iframe'];
+  let contacts_inp_id = ['address_inp','gmap_inp','pn1_inp','pn2_inp','email_inp','fb_inp','insta_inp','tw_inp','iframe_inp'];
+
+let data_str ="";
+for(i=0;i<index.length;i++){
+  data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value + '&';
+}
+
+data_str+="upd_contacts";
+let xhr = new XMLHttpRequest();
+  xhr.open("POST","ajax/settings_crud.php",true);
+  xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded');
+  xhr.onload = function(){
+    var myModal =document.getElementById('contacts-s');
+  var modal = bootstrap.Modal.getInstance(myModal);
+  modal.hide();
+
+    if(this.responseText==1 ){
+     alert('success','changes saved!'); 
+     get_contacts();
+  }
+  else{
+    alert('error','No changes!');
+  }
+
+
+  }
+  xhr.send(data_str);
+
+
+}
 window.onload = function(){
   get_general();
   get_contacts();
