@@ -1,6 +1,7 @@
 # Booking
 
 Features:
+<br>
 User login and registration
 <br>
 Filter Rooms
