@@ -28,32 +28,30 @@
 </head>
   <body class="bg-light">
   <?php require('inc/header.php') ?>
+
+
+  <!-- carousel -->
   <div class="container-fluid px-lg-4 mt-4">
   <div class="swiper swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="images/carousel/1.png" class="w-100 d-block" />
-      </div>
-      <div class="swiper-slide">
-        <img src="images/carousel/2.png" class="w-100 d-block" />
-      </div>
-      <div class="swiper-slide">
-        <img src="images/carousel/3.png" class="w-100 d-block" />
-      </div>
-      <div class="swiper-slide">
-        <img src="images/carousel/4.png" class="w-100 d-block" />
-      </div>
-      <div class="swiper-slide">
-        <img src="images/carousel/5.png" class="w-100 d-block" />
-      </div>
-      <div class="swiper-slide">
-        <img src="images/carousel/6.png" class="w-100 d-block" />
+
+<?php
+
+$res = selectAll('carousel');
+
+while($row = mysqli_fetch_assoc($res)){
+  $path = CAROUSEL_IMG_PATH;
+  echo <<<data
+  
+  <div class="swiper-slide">
+        <img src="$path$row[image]" class="w-100 d-block" />
       </div>
       
-    </div>
-    <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div> -->
+  
+  data;
+}
+
+?>
   </div>
 </div>
   </div>
