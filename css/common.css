@@ -27,6 +27,13 @@ input[type=number]{
   border:  var(--teal-hover);
 }
 
+.custom-alert{
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  z-index: 1111;
+}
+
 .h-line{
   width: 150px;
   margin: 0 auto;
