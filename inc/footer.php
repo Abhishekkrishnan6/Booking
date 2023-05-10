@@ -54,7 +54,7 @@ data;
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
 
-function alert(type, msg) {
+function alert(type, msg,postion='body') {
     let bs_class = (type == 'success') ? 'alert-success' : 'alert-danger';
     let element = document.createElement('div');
     element.innerHTML = `
@@ -63,15 +63,18 @@ function alert(type, msg) {
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     `;
-    // if(postion=='body'){
+     if(postion=='body'){
     document.body.append(element);
-    // element.classList.add('custom-alert');
-    // }
-    // else{
-    //   document.getElementById(postion).appendChild(element);
+     element.classList.add('custom-alert');
+     }
+     else{
+       document.getElementById(postion).appendChild(element);
 
-    // }
-    // setTimeout(remAlert,3000);
+     }
+     setTimeout(remAlert,3000);
+  }
+  function remAlert(){
+    document.getElementsByClassName('alert')[0].remove();
   }
 
 
@@ -114,15 +117,14 @@ var modal = bootstrap.Modal.getInstance(myModal);
 modal.hide();
 let xhr = new XMLHttpRequest();
   xhr.open("POST","ajax/login_register.php",true);
-  xhr.onload = function(){
-    
-if(this.responseText == 'pass missmatch'){
+xhr.onload = function(){
+if(this.responseText == 'pass_missmatch'){
   alert('error',"password missmatch");
 }
-else if(this.responseText == 'email already'){
+else if(this.responseText == 'email_already'){
   alert('error',"email is already regester");
 }
-else if(this.responseText == 'phone already'){
+else if(this.responseText == 'phone_already'){
   alert('error',"phone number is already used");
 }
 
@@ -136,6 +138,9 @@ else if(this.responseText == 'inv_img'){
 
 else if(this.responseText == 'upd_failed'){
   alert('error',"upload failed size greater than 2 mb");
+}
+else if(this.responseText == 'mail_failed'){
+  alert('error'," failed to send mail ");
 }
 else if(this.responseText == 'ins_failed'){
   alert('error',"registration failed");

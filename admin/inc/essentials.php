@@ -16,6 +16,9 @@ define('ABOUT_FOLDER', 'about/');
 define('CAROUSEL_FOLDER', 'carousel/');
 define('USERS_FOLDER', 'users/');
 
+//send grid api
+define('SENDGRID_API_KEY',"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");
+
 function adminLogin()
 {
 
@@ -91,40 +94,40 @@ function deleteImage($image, $folder)
     }
 }
 
-// function uploadUserImage($image){
+function uploadUserImage($image){
 
 
 
-//     $valid_mime = ['image/jpeg','image/png','image/webp'];
-//     $img_mime = $image['type'];
-//     if (!in_array($img_mime, $valid_mime)) {
-//         return 'inv_img'; 
-//      }
-//       else {
-//         $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
-//         $rname = 'IMG_' . random_int(111111, 999999) . ".jpeg";
+    $valid_mime = ['image/jpeg','image/png','image/webp'];
+    $img_mime = $image['type'];
+    if (!in_array($img_mime, $valid_mime)) {
+        return 'inv_img'; 
+     }
+      else {
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $rname = 'IMG_' . random_int(111111, 999999) . ".jpeg";
 
 
-//         $img_path = UPLOAD_IMAGE_PATH.USERS_FOLDER.$rname;
+        $img_path = UPLOAD_IMAGE_PATH.USERS_FOLDER.$rname;
         
-//         if($ext== 'png' || $ext == 'PNG'){
-//             $img  = imagecreatefrompng($image['tmp_name']);
-//         }
-//         else if($ext== 'webp' || $ext == 'WEBP'){
-//             $img  = imagecreatefromwebp($image['tmp_name']);
-//         }
-//         else{
-//             $img  = imagecreatefromjpeg($image['tmp_name']);
-//         }
+        if($ext == 'png' || $ext == 'PNG'){
+            $img  = imagecreatefrompng($image['tmp_name']);
+        }
+        else if($ext== 'webp' || $ext == 'WEBP'){
+            $img  = imagecreatefromwebp($image['tmp_name']);
+        }
+        else{
+            $img  = imagecreatefromjpeg($image['tmp_name']);
+        }
         
-//         if (imagejpeg($img,$img_path,75)) {
-//             return $rname;
-//         } else {
-//             return 'upd_failed';
-//         }
-//     }
+        if (imagejpeg($img,$img_path,75)) {
+            return $rname;
+        } else {
+            return 'upd_failed';
+        }
+    }
 
 
 
-// }
+}
 ?>
