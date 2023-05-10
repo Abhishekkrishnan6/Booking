@@ -17,7 +17,7 @@ define('CAROUSEL_FOLDER', 'carousel/');
 define('USERS_FOLDER', 'users/');
 
 //send grid api
-define('SENDGRID_API_KEY',"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");
+define('SENDGRID_API_KEY',"");
 
 function adminLogin()
 {
