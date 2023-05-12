@@ -1,11 +1,9 @@
 <div class="container-fluid bg-white mt-5">
   <div class="row">
     <div class="col-lg-4 p-4">
-      <h3 class="h-font fw-bold fs-3 mb-2">BOOKINGS</h3>
+      <h3 class="h-font fw-bold fs-3 mb-2"><?php echo $settings_r['site_title'] ?></h3>
       <p>
-        weugweuhjfgvwe wugrw wuyr uyfwr
-        iukfiyfuy
-        udcutfyt uyfuy registerModal
+      <?php echo $settings_r['site_about'] ?>
       </p>
     </div>
     <div class="col-lg-4 p-4">
@@ -156,6 +154,106 @@ register_form.reset();
   xhr.send(data);
 
 });
+
+
+
+let login_form = document.getElementById('login-form');
+login_form.addEventListener('submit', (e)=>{
+e.preventDefault();
+let data = new FormData();
+data.append('email_mob',login_form.elements['email_mob'].value);
+data.append('pass',login_form.elements['pass'].value);
+data.append('login','');
+
+
+var myModal =document.getElementById('loginModal');
+var modal = bootstrap.Modal.getInstance(myModal);
+modal.hide();
+let xhr = new XMLHttpRequest();
+xhr.open("POST","ajax/login_register.php",true);
+xhr.onload = function(){
+if(this.responseText == 'inv_email_mob'){
+  alert('error',"invalid email or mobile number");
+}
+// else if(this.responseText == 'not_verified'){
+//   alert('error',"email not verified");
+// }
+else if(this.responseText == 'inactive'){
+  alert('error',"account banned");
+}
+
+
+
+
+else if(this.responseText == 'invalid_pass'){
+  alert('error',"incorrect password");
+}
+
+
+
+else{
+window.location = window.location.pathname;
+
+}
+
+  }
+  xhr.send(data);
+
+});
+
+
+let forgot_form = document.getElementById('forgot-form');
+forgot_form.addEventListener('submit', (e)=>{
+e.preventDefault();
+let data = new FormData();
+data.append('email',forgot_form.elements['email'].value);
+data.append('forgot_pass','');
+
+
+var myModal =document.getElementById('forgotModal');
+var modal = bootstrap.Modal.getInstance(myModal);
+modal.hide();
+let xhr = new XMLHttpRequest();
+xhr.open("POST","ajax/login_register.php",true);
+xhr.onload = function(){
+if(this.responseText == 'inv_email'){
+  alert('error',"invalid email ");
+}
+// else if(this.responseText == 'not_verified'){
+//   alert('error',"email not verified");
+// }
+else if(this.responseText == 'inactive'){
+  alert('error',"account banned");
+}
+
+
+
+
+else if(this.responseText == 'mail_failed'){
+  alert('error',"cannot send email");
+}
+else if(this.responseText == 'upd_failed'){
+  alert('error',"account recovery failed");
+}
+
+
+
+else{
+  alert('success',"reset linksent to email");
+  forgot_form.reset();
+
+}
+
+  }
+  xhr.send(data);
+
+});
+
+
+
+
+
+
   setActive();
 
 </script>
